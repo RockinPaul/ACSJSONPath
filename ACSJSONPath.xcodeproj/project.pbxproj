@@ -10,6 +10,10 @@
 		50EC81D119406CDC00BC5DB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EC81D019406CDC00BC5DB9 /* AppDelegate.swift */; };
 		50EC81D319406CDC00BC5DB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50EC81D219406CDC00BC5DB9 /* Images.xcassets */; };
 		50EC81DF19406CDC00BC5DB9 /* ACSJSONPathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EC81DE19406CDC00BC5DB9 /* ACSJSONPathTests.swift */; };
+		50EC81E919406F2F00BC5DB9 /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 50EC81E819406F2F00BC5DB9 /* test.json */; };
+		50EC81EE19406F8700BC5DB9 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EC81ED19406F8700BC5DB9 /* RootViewController.swift */; };
+		50EC81F019406FDE00BC5DB9 /* ACSJSONUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EC81EF19406FDE00BC5DB9 /* ACSJSONUtil.swift */; };
+		50EC81F219406FE800BC5DB9 /* ACSJSONPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EC81F119406FE800BC5DB9 /* ACSJSONPath.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +34,10 @@
 		50EC81D819406CDC00BC5DB9 /* ACSJSONPathTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ACSJSONPathTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		50EC81DD19406CDC00BC5DB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50EC81DE19406CDC00BC5DB9 /* ACSJSONPathTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ACSJSONPathTests.swift; sourceTree = "<group>"; };
+		50EC81E819406F2F00BC5DB9 /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
+		50EC81ED19406F8700BC5DB9 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		50EC81EF19406FDE00BC5DB9 /* ACSJSONUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACSJSONUtil.swift; sourceTree = "<group>"; };
+		50EC81F119406FE800BC5DB9 /* ACSJSONPath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ACSJSONPath.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +79,10 @@
 		50EC81CD19406CDC00BC5DB9 /* ACSJSONPath */ = {
 			isa = PBXGroup;
 			children = (
+				50EC81EA19406F4600BC5DB9 /* Vendor */,
 				50EC81D019406CDC00BC5DB9 /* AppDelegate.swift */,
+				50EC81ED19406F8700BC5DB9 /* RootViewController.swift */,
+				50EC81E819406F2F00BC5DB9 /* test.json */,
 				50EC81D219406CDC00BC5DB9 /* Images.xcassets */,
 				50EC81CE19406CDC00BC5DB9 /* Supporting Files */,
 			);
@@ -101,6 +112,31 @@
 				50EC81DD19406CDC00BC5DB9 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		50EC81EA19406F4600BC5DB9 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				50EC81EB19406F4600BC5DB9 /* ACSJSONPath */,
+				50EC81EC19406F4600BC5DB9 /* ACSJSONUtil */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		50EC81EB19406F4600BC5DB9 /* ACSJSONPath */ = {
+			isa = PBXGroup;
+			children = (
+				50EC81F119406FE800BC5DB9 /* ACSJSONPath.swift */,
+			);
+			path = ACSJSONPath;
+			sourceTree = "<group>";
+		};
+		50EC81EC19406F4600BC5DB9 /* ACSJSONUtil */ = {
+			isa = PBXGroup;
+			children = (
+				50EC81EF19406FDE00BC5DB9 /* ACSJSONUtil.swift */,
+			);
+			path = ACSJSONUtil;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50EC81D319406CDC00BC5DB9 /* Images.xcassets in Resources */,
+				50EC81E919406F2F00BC5DB9 /* test.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +237,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50EC81EE19406F8700BC5DB9 /* RootViewController.swift in Sources */,
+				50EC81F019406FDE00BC5DB9 /* ACSJSONUtil.swift in Sources */,
+				50EC81F219406FE800BC5DB9 /* ACSJSONPath.swift in Sources */,
 				50EC81D119406CDC00BC5DB9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -377,6 +417,7 @@
 				50EC81E419406CDC00BC5DB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		50EC81E519406CDC00BC5DB9 /* Build configuration list for PBXNativeTarget "ACSJSONPathTests" */ = {
 			isa = XCConfigurationList;
@@ -385,6 +426,7 @@
 				50EC81E719406CDC00BC5DB9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
