@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ACSJSONPath: NSObject {
+class ACSJSONPath {
     
     /**
     *  Singleton

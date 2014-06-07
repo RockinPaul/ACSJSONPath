@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ACSJSONUtil: NSObject {
+class ACSJSONUtil {
     
     // 路径常量
     let mainBundleDirectory: String = NSBundle.mainBundle().bundlePath
