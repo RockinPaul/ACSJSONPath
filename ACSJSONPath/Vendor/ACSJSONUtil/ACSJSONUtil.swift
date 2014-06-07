@@ -17,6 +17,7 @@ class ACSJSONUtil: NSObject {
     
     /**
     *  Singleton
+    *  via: http://stackoverflow.com/questions/24024549/dispatch-once-singleton-model-in-swift
     */
     class var sharedInstance: ACSJSONUtil {
         get {

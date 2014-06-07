@@ -124,9 +124,7 @@ class RootViewController: UIViewController, UIAlertViewDelegate {
     
 //-- JSON data OL ----------------------------------------------------------------------------------
     func gettingOLJSONData() {
-        
-        var responseObj: AnyObject?
-        
+                
         var theURL: NSURL = NSURL(string: "http://www.battlenet.com.cn/api/wow/battlePet/species/258")
         
         var request: NSMutableURLRequest = NSMutableURLRequest(

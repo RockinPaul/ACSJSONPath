@@ -12,6 +12,7 @@ class ACSJSONPath: NSObject {
     
     /**
     *  Singleton
+    *  via: http://stackoverflow.com/questions/24024549/dispatch-once-singleton-model-in-swift
     */
     class var sharedInstance:ACSJSONPath {
         get {
@@ -61,7 +62,7 @@ class ACSJSONPath: NSObject {
                             Range<String.Index>(start: indexStrDirty.startIndex, end: (indexStrDirty.endIndex.pred()))
                             
                             // substring 待详细考证
-                            // http: //stackoverflow.com/questions/24044851/how-do-you-use-string-substringwithrange-or-how-do-ranges-work-in-swift
+                            // http://stackoverflow.com/questions/24044851/how-do-you-use-string-substringwithrange-or-how-do-ranges-work-in-swift
                         )
                         //println(indexStr)
                         
