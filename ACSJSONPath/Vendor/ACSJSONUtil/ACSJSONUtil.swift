@@ -6,7 +6,7 @@
 //  Copyright (c) 2014年 Albert Chu. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 class ACSJSONUtil {
     
