@@ -38,17 +38,17 @@ class ACSJSONPath {
             var container: AnyObject = dict!
             
             // 所有的 key，但连接着后面的数组下标（如果有的话）
-            var keys: Array = path!.componentsSeparatedByString(".")
+            let keys: Array = path!.componentsSeparatedByString(".")
             //println(keys)
             
             for key: String in keys {
                 // 是否有数组
                 if key.hasSuffix("]") {
                     // 分离下标
-                    var keyAndIndex: Array = key.componentsSeparatedByString("[")
+                    let keyAndIndex: Array = key.componentsSeparatedByString("[")
                     
                     // 顶层数组对象的 key
-                    var keyForTopArray: String = keyAndIndex[0]
+                    let keyForTopArray: String = keyAndIndex[0]
                     
                     // 顶层数组对象 (由于 NSDictionary 中的 数组 不同于 Swift 的 Array ，所以取为 NSArray)
                     var arrayObj: NSArray = container[keyForTopArray] as NSArray
@@ -56,8 +56,8 @@ class ACSJSONPath {
                     // 处理多级数组
                     /** 数组层数 (从1开始) */
                     for (var i: Int = 1; i < keyAndIndex.count; i++) {
-                        var indexStrDirty: String = keyAndIndex[i]
-                        var indexStr: String =
+                        let indexStrDirty: String = keyAndIndex[i]
+                        let indexStr: String =
                         indexStrDirty.substringWithRange(
                             Range<String.Index>(start: indexStrDirty.startIndex, end: (indexStrDirty.endIndex.pred()))
                             
@@ -66,7 +66,7 @@ class ACSJSONPath {
                         )
                         //println(indexStr)
                         
-                        var indexForNewContainer: Int = indexStr.toInt()!
+                        let indexForNewContainer: Int = indexStr.toInt()!
                         
                         var element: AnyObject
                         
@@ -100,10 +100,10 @@ class ACSJSONPath {
             
             return container;
             
+        } else {
+           return nil
         }
         
-        return nil
     }
-    
    
 }

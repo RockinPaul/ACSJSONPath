@@ -46,21 +46,32 @@ class ACSJSONUtil {
             
         //println(fullPath)
         
-        var jsonObject: AnyObject?
-        var error: NSError?
-        
-        if jsonData {
+        if let data = jsonData {
             
-            jsonObject = NSJSONSerialization.JSONObjectWithData(
-                jsonData,
+            var error: NSError?
+            
+            let jsonObject: AnyObject? = NSJSONSerialization.JSONObjectWithData(
+                data,
                 options: NSJSONReadingOptions.AllowFragments,
                 error: &error)
             
-            if (jsonObject && !error) {
-                success(responseObj: jsonObject!)
+            if let json : AnyObject = jsonObject {
+                success(responseObj: json)
             } else {
+                let parsingError: NSError = error!
+                //println ("error_info: \(parsingError)")
                 failure(failureString: "parsing error")
             }
+            
+            /*
+            if let parsingError = error {
+                println ("error_info: \(parsingError)")
+                failure(failureString: "parsing error")
+            } else {
+                let json: AnyObject = jsonObject!
+                success(responseObj: json)
+            }
+            **/
             
         } else {
             failure(failureString: "file not exsit")
