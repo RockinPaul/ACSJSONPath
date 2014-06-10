@@ -37,8 +37,8 @@ class ACSJSONUtil {
     */
     func parsingJSONDataByFile(
         name: String,
-        success: (responseObj: AnyObject) -> (),
-        failure: (failureString: String) -> ()
+        success: (responseObj: AnyObject) -> Void,
+        failure: (failureString: String) -> Void
         )
     {
         var fullPath: String = mainBundleDirectory + jsonDirectory + name
@@ -55,12 +55,13 @@ class ACSJSONUtil {
                 options: NSJSONReadingOptions.AllowFragments,
                 error: &error)
             
-            if let json : AnyObject = jsonObject {
+            if let json: AnyObject = jsonObject {
                 success(responseObj: json)
             } else {
                 let parsingError: NSError = error!
+                let errorInfo = parsingError.description
                 //println ("error_info: \(parsingError)")
-                failure(failureString: "parsing error")
+                failure(failureString: "parsing error: \(errorInfo)")
             }
             
             /*

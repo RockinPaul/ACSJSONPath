@@ -82,7 +82,7 @@ class ACSJSONPath {
                             container = element;
                         } else {
                             // 如果不是最后一层，则判断该元素如果是数组对象才可以进入下一次循环继续循环取下标元素
-                            if (element.isKindOfClass(NSArray)) {
+                            if (element is NSArray) {
                                 // 替换为新数组
                                 arrayObj = element as NSArray;
                             } else {

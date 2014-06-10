@@ -148,7 +148,7 @@ class RootViewController: UIViewController, UIAlertViewDelegate {
                     
                     var data: NSData = responseString.dataUsingEncoding(NSUTF8StringEncoding)
                     
-                    var json : AnyObject! =
+                    var json: AnyObject! =
                     NSJSONSerialization.JSONObjectWithData(
                         data,
                         options:NSJSONReadingOptions.AllowFragments,
